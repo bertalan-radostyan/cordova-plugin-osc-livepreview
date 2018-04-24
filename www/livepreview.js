@@ -15,3 +15,5 @@ var LivePreview = {
         });
     }
 }
+
+module.exports = LivePreview;

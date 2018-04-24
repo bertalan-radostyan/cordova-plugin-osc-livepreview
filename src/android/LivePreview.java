@@ -19,10 +19,14 @@ import com.radostyan.cordova.livepreview.MJpegInputStream;
 
 public class LivePreview extends CordovaPlugin {
 	@Override
-	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException, IOException {
+	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 		if (action.equals("getLivePreview")) {
 			String ip = args.getString(0);
-			getLivePreview(callbackContext, ip);
+			try {
+				getLivePreview(callbackContext, ip);
+			} catch (Exception e) {
+				callbackContext.error(e.getMessage());
+			}
 
 			return true;
 		}
@@ -30,11 +34,11 @@ public class LivePreview extends CordovaPlugin {
 		return false;
 	}
 
-	private void getLivePreview(CallbackContext callbackContext, String ip) throws IOException, MalformedURLException {
+	private void getLivePreview(CallbackContext callbackContext, String ip) throws IOException, JSONException, MalformedURLException {
 		URL url = new URL(ip + "osc/command/execute");
 		HttpURLConnection postConnection = (HttpURLConnection) url.openConnection();
-		connection.setDoInput(true);
-		connection.setDoOutput(true);
+		postConnection.setDoInput(true);
+		postConnection.setDoOutput(true);
 
 		JSONObject input = new JSONObject();
 		input.put("name", "camera.getLivePreview");
