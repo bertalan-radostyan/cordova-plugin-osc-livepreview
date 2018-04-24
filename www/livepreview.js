@@ -1,7 +1,7 @@
 var exec = require('cordova/exec');
 
 var LivePreview = {
-    getLivePreview: function(callback, error) {
+    getLivePreview: function(ip, callback, error) {
         exec(function(image) {
                 callback(image);
             },
@@ -9,7 +9,7 @@ var LivePreview = {
                 error(error);
             },
             'LivePreview',
-            'getLivePreview');
+            'getLivePreview', [ip]);
     }
 }
 
