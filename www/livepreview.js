@@ -1,19 +1,15 @@
 var exec = require('cordova/exec');
-var Rx = require('rxjs/Rx');
-var Observable = Rx.Observable;
 
 var LivePreview = {
-    getLivePreview: function(ip) {
-        return Observable.create(function(observer) {
-            exec(function(image) {
-                    observer.next(image);
-                },
-                function(error) {
-                    observer.error(error);
-                },
-                'LivePreview',
-                'getLivePreview');
-        });
+    getLivePreview: function(callback) {
+        exec(function(image) {
+                callback(image);
+            },
+            function(error) {
+                callback(error);
+            },
+            'LivePreview',
+            'getLivePreview');
     }
 }
 
