@@ -12,7 +12,7 @@
   <platform name="android">
     <config-file target="config.xml" parent="/*">
       <feature name="LivePreview">
-        <param name="android-package" value="com.radostyan.cordova.livepreview"/>
+        <param name="android-package" value="com.radostyan.cordova.livepreview.LivePreview"/>
       </feature>
     </config-file>
     <config-file target="AndroidManifest.xml" parent="/*">
