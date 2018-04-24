@@ -1,4 +1,4 @@
-﻿package com.radostyan.cordova.livepreview;
+package com.radostyan.cordova.livepreview;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
