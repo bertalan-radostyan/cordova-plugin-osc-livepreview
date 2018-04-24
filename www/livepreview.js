@@ -5,8 +5,8 @@ var LivePreview = {
         exec(function(image) {
                 callback(image);
             },
-            function(error) {
-                error(error);
+            function(err) {
+                error(err);
             },
             'LivePreview',
             'getLivePreview', [ip]);
