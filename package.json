@@ -1,0 +1,34 @@
+{
+  "name": "cordova-plugin-osc-livepreview",
+  "version": "0.1.0",
+  "description": "Cordova OSC Live Preview Plugin",
+  "author": "Bertalan Radostyan",
+  "license": "Apache-2.0",
+  "engines": {
+    "cordovaDependencies": {
+      "0.1.0": { "cordova-android": ">4.0.0" }
+    }
+  },
+  "cordova": {
+    "id": "cordova-plugin-osc-livepreview",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova",
+    "cordova-android",
+    "osc",
+    "live",
+    "preview",
+    "ricoh",
+    "theta"
+  ],
+  "dependencies": {
+    "rxjs": "^5.5.2"
+  },
+  "devDependencies": {
+    "dmd-plugin-cordova-plugin": "^0.1.0"
+  }
+}
