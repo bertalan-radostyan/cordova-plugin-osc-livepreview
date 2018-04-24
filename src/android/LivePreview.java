@@ -20,7 +20,7 @@ import com.radostyan.cordova.livepreview.MJpegInputStream;
 public class LivePreview extends CordovaPlugin {
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException, IOException {
-		if (action.equals('getLivePreview')) {
+		if (action.equals("getLivePreview")) {
 			String ip = args.getString(0);
 			getLivePreview(callbackContext, ip);
 
