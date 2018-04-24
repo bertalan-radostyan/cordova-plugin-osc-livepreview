@@ -1,5 +1,6 @@
-﻿var exec = require('cordova/exec');
-var Observable = require('rxjs/Observable');
+var exec = require('cordova/exec');
+var Rx = require('rxjs/Rx');
+var Observable = Rx.Observable;
 
 var LivePreview = {
     getLivePreview: function(ip) {
