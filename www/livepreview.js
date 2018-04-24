@@ -1,12 +1,12 @@
 var exec = require('cordova/exec');
 
 var LivePreview = {
-    getLivePreview: function(callback) {
+    getLivePreview: function(callback, error) {
         exec(function(image) {
                 callback(image);
             },
             function(error) {
-                callback(error);
+                error(error);
             },
             'LivePreview',
             'getLivePreview');
