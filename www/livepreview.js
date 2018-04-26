@@ -10,6 +10,15 @@ var LivePreview = {
             },
             'LivePreview',
             'getLivePreview', [ip]);
+    },
+    stopLivePreview: function(callback, error) {
+        exec(function() {
+            callback();
+        }, function(err) {
+            error(err);
+        },
+        'LivePreview',
+        'stopLivePreview');
     }
 }
 
